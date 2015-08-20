@@ -2,9 +2,26 @@
   "name": "WebApplicationBasic",
   "private": true,
   "dependencies": {
-    "bootstrap": "3.0.0",
+    "bootstrap": "4.0.0-alpha",
     "jquery": "2.1.4",
     "jquery-validation": "1.11.1",
     "jquery-validation-unobtrusive": "3.2.2"
+  },
+  "overrides": {
+    "bootstrap": {
+      "main": [
+        "dist/css/*.**",
+        "dist/js/*.**"
+      ]
+    },
+    "jquery": {
+      "main": "dist/jquery.{js,min.js,min.map}"
+    },
+    "jquery-validation": {
+      "main": "jquery.validate.js"
+    },
+    "jquery-validation-unobtrusive": {
+      "main": "jquery.validate.unobtrusive{.js,.js.min}"
+    }
   }
 }
