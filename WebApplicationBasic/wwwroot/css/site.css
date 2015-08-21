@@ -11,7 +11,15 @@ textarea {
 }
 
 /* Carousel */
+.carousel {
+  padding: 1rem 0;
+}
 .carousel-caption p {
     font-size: 20px;
     line-height: 1.4;
+}
+
+/* Card */
+.card {
+  min-height: 360px;
 }
