@@ -1,5 +1,6 @@
 body {
-    padding-top: 54px;
+    /*54px for navbar + 15 padding*/
+    padding-top: 69px;
     padding-bottom: 20px;
 }
 
@@ -12,7 +13,7 @@ textarea {
 
 /* Carousel */
 .carousel {
-  padding: 1rem 0;
+  margin-bottom: 15px;
 }
 .carousel-caption p {
     font-size: 20px;
