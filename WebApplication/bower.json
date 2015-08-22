@@ -15,13 +15,13 @@
       ]
     },
     "jquery": {
-      "main": "dist/jquery.{js,min.js,min.map}"
+      "main": "dist/jquery{.js,.min.js,.min.map}"
     },
     "jquery-validation": {
       "main": "jquery.validate.js"
     },
     "jquery-validation-unobtrusive": {
-      "main": "jquery.validate.unobtrusive{.js,.js.min}"
+      "main": "jquery.validate.unobtrusive{.js,.min.js}"
     }
   }
 }
