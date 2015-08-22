@@ -1,3 +1,8 @@
+/* Overrides */
+.btn.nav-link {
+  border: none;
+}
+
 body {
     /*54px for navbar + 15 padding*/
     padding-top: 69px;
