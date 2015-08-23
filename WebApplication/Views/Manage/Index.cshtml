@@ -58,7 +58,7 @@
             </p>
             @*@if (Model.TwoFactor)
                 {
-                    <form asp-controller="Manage" asp-action="DisableTwoFactorAuthentication" method="post" class="form-horizontal" role="form">
+                    <form asp-controller="Manage" asp-action="DisableTwoFactorAuthentication" method="post" role="form">
                         <text>
                             Enabled
                             <button type="submit" class="btn btn-link">Disable</button>
@@ -67,7 +67,7 @@
                 }
                 else
                 {
-                    <form asp-controller="Manage" asp-action="EnableTwoFactorAuthentication" method="post" class="form-horizontal" role="form">
+                    <form asp-controller="Manage" asp-action="EnableTwoFactorAuthentication" method="post" role="form">
                         <text>
                             Disabled
                             <button type="submit" class="btn btn-link">Enable</button>
