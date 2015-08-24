@@ -14,7 +14,6 @@ Take aways:
 * update `navbar` component structure as per BS4
 * update `carousel` component structure as per BS4
 * consistent use of `btn-primary` for primary action on forms
-* use `card` components for ASP.NET 5 key concepts display [WIP]
 
 ![Web Application Basic](assets/20150822103303.jpg)
 
