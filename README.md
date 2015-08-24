@@ -40,6 +40,8 @@ Take aways:
 The code will change after MVC TagHelpers are upgraded to support more features. For now the code needs to use standard Razor C# code (which is ugly)
 * The `jquery-validation` has been updated to version `1.14.0`. It has different distribution files structure similar to `jQuery`
 
+![Web Application](assets/20150824235725.jpg)
+
 ## Author
 
 @blazejewicz
