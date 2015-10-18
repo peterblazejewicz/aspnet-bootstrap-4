@@ -4,17 +4,23 @@
 {
     <form asp-controller="Account" asp-action="LogOff" method="post" id="logoutForm" class="navbar-right">
         <ul class="nav navbar-nav navbar-right">
-            <li>
-                <a asp-controller="Manage" asp-action="Index" title="Manage">Hello @User.GetUserName()!</a>
+            <li class="nav-item">
+                <a asp-controller="Manage" asp-action="Index" title="Manage" class="nav-link">Hello @User.GetUserName()!</a>
             </li>
-            <li><a href="javascript:document.getElementById('logoutForm').submit()">Log off</a></li>
+            <li class="nav-item">
+                <button type="submit" class="btn btn-link navbar-btn nav-link">Log off</button>
+              </li>
         </ul>
     </form>
 }
 else
 {
     <ul class="nav navbar-nav navbar-right">
-        <li><a asp-controller="Account" asp-action="Register">Register</a></li>
-        <li><a asp-controller="Account" asp-action="Login">Log in</a></li>
+        <li class="nav-item">
+            <a asp-controller="Account" asp-action="Register" class="nav-link">Register</a>
+        </li>
+        <li class="nav-item">
+            <a asp-controller="Account" asp-action="Login" class="nav-link">Log in</a>
+        </li>
     </ul>
 }

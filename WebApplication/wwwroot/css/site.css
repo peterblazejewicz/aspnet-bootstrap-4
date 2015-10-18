@@ -24,3 +24,22 @@ textarea {
     font-size: 20px;
     line-height: 1.4;
 }
+/* navigation */
+.navbar-right {
+  float: right;
+}
+.navbar-btn {
+  padding-left: 0;
+  padding-right: 0;
+}
+@media (max-width: 33.9em) {
+    .navbar-right {
+        float: none;
+    }
+    .navbar-nav .nav-item {
+        float: none;
+    }
+    .navbar-nav .nav-item+.nav-item {
+        margin-left: 0;
+    }
+}

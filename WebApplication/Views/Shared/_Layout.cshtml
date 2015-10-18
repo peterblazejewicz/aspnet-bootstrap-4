@@ -17,28 +17,35 @@
         </environment>
     </head>
     <body>
-        <nav class="navbar navbar-dark bg-inverse navbar-fixed-top">
+        <header class="navbar navbar-dark navbar-fixed-top bg-inverse" role="banner">
             <div class="container">
-              <a asp-controller="Home" asp-action="Index" class="navbar-brand">WebApplication</a>
-              <button type="button" class="navbar-toggler pull-right hidden-sm-up" data-toggle="collapse" data-target=".collapse">
-                ☰
-              </button>
-              <div class="collapse navbar-toggleable-xs">
-                  <ul class="nav navbar-nav">
-                      <li class="nav-item">
-                        <a asp-controller="Home" asp-action="Index" class="nav-link">Home</a>
-                      </li>
-                      <li class="nav-item">
-                        <a asp-controller="Home" asp-action="About" class="nav-link">About</a>
-                      </li>
-                      <li class="nav-item">
-                        <a asp-controller="Home" asp-action="Contact" class="nav-link">Contact</a>
-                      </li>
-                  </ul>
-                  @await Html.PartialAsync("_LoginPartial")
+                <a asp-controller="Home" asp-action="Index" class="navbar-brand hidden-sm-up">WebApplicationBasic</a>
+                <button class="navbar-toggler pull-right hidden-sm-up" type="button" data-toggle="collapse" data-target=".collapse">☰</button>
+            </div>
+            <div class="collapse navbar-toggleable-xs">
+                <div class="container">
+                    <nav>
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                              <a asp-controller="Home" asp-action="Index" class="navbar-brand hidden-xs-down">WebApplicationBasic</a>
+                            </li>
+                            <li class="nav-item">
+                              <a asp-controller="Home" asp-action="Index" class="nav-link">Home</a>
+                            </li>
+                            <li class="nav-item">
+                              <a asp-controller="Home" asp-action="About" class="nav-link">About</a>
+                            </li>
+                            <li class="nav-item">
+                              <a asp-controller="Home" asp-action="Contact" class="nav-link">Contact</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <nav>
+                        @await Html.PartialAsync("_LoginPartial")
+                    </nav>
               </div>
-          </div>
-        </nav>
+            </div>
+        </header>
         <div class="container body-content">
             @RenderBody()
             <footer>
