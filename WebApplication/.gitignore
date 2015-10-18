@@ -207,3 +207,6 @@ FakesAssemblies/
 
 # client side deps in wwwroot installed via Bower/Gulp
 wwwroot/lib
+
+# LocalDB
+WebApplication.db
