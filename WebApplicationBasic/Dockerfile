@@ -1,10 +1,8 @@
-FROM microsoft/aspnet:1.0.0-beta8
+FROM microsoft/aspnet:1.0.0-rc1-final
 
-COPY project.json /app/
+COPY . /app
 WORKDIR /app
 RUN ["dnu", "restore"]
-COPY . /app
 
-
-EXPOSE 5000
+EXPOSE 5000/tcp
 ENTRYPOINT ["dnx", "-p", "project.json", "web"]
