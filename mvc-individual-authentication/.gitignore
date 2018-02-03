@@ -325,3 +325,6 @@ ASALocalRun/
 # MSBuild Binary and Structured Log
 *.binlog
 
+# remove local DB from the repo
+app.db
+
