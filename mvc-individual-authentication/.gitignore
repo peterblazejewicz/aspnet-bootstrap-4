@@ -328,3 +328,7 @@ ASALocalRun/
 # remove local DB from the repo
 app.db
 
+# client deps out of repo
+yarn.lock
+package.json
+
