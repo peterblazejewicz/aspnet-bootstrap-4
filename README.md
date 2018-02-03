@@ -1,3 +1,9 @@
+# [:construction:] .NET templates (aspnet/templating) with Bootstrap 4
+
+In progress. The BS 4 landed, but not yet in your VS 2017.
+
+Note that some content here is no longer applicable to a current aspnet/templating content (`Gulp`-ing no more?).
+
 # ASP.NET 5 Bootstrap 4 (alpha)
 
 The ASP.NET 5 web templates from @omnisharp/generator-aspnet updated for Bootstrap 4.
