@@ -10,10 +10,12 @@ namespace mvc_individual_authentication.Models.AccountViewModels
     {
         [Required]
         [EmailAddress]
+        [Display(Prompt="Enter email")]
         public string Email { get; set; }
 
         [Required]
         [DataType(DataType.Password)]
+        [Display(Prompt="Password")]
         public string Password { get; set; }
 
         [Display(Name = "Remember me?")]
