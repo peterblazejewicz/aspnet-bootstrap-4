@@ -10,6 +10,7 @@ namespace mvc_individual_authentication.Models.AccountViewModels
     {
         [Required]
         [EmailAddress]
+        [Display(Prompt="Enter Email")]
         public string Email { get; set; }
     }
 }
