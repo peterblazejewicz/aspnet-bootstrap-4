@@ -52,15 +52,13 @@
             </div>
         </nav>
     </header>
-    <main role="main">
-        <div class="container">
-            @RenderBody()
-            <hr />
-        </div>
-        <footer class="container">
-            <p>&copy; 2018 - ASP.NET</p>
-        </footer>
+    <main role="main" class="container body-content">
+        @RenderBody()
+        <hr />
     </main>
+    <footer class="container">
+        <p>&copy; 2018 - ASP.NET</p>
+    </footer>
 
 
     <environment include="Development">
