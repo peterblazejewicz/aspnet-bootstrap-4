@@ -20,6 +20,7 @@ namespace mvc_individual_authentication
         public static IWebHost BuildWebHost(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
                 .UseStartup<Startup>()
+                .UseKestrel(options => options.ConfigureEndpoints())
                 .Build();
     }
 }

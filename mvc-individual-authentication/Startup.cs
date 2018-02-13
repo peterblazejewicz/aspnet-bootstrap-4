@@ -11,6 +11,9 @@ using Microsoft.Extensions.DependencyInjection;
 using mvc_individual_authentication.Data;
 using mvc_individual_authentication.Models;
 using mvc_individual_authentication.Services;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Rewrite;
+using Microsoft.AspNetCore.Http;
 
 namespace mvc_individual_authentication
 {
@@ -26,6 +29,11 @@ namespace mvc_individual_authentication
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.Configure<MvcOptions>(options =>
+            {
+                options.Filters.Add(new RequireHttpsAttribute());
+            });
+
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlite(Configuration.GetConnectionString("DefaultConnection")));
 
@@ -62,6 +70,20 @@ namespace mvc_individual_authentication
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
             });
+
+            var options = new RewriteOptions()
+                .AddRedirectToHttps();
+
+            int? httpsPort = null;
+            var httpsSection = Configuration.GetSection("HttpServer:Endpoints:Https");
+            if (httpsSection.Exists())
+            {
+                var httpsEndpoint = new EndpointConfiguration();
+                httpsSection.Bind(httpsEndpoint);
+                httpsPort = httpsEndpoint.Port;
+            }
+            var statusCode = env.IsDevelopment() ? StatusCodes.Status302Found : StatusCodes.Status301MovedPermanently;
+            app.UseRewriter(new RewriteOptions().AddRedirectToHttps(statusCode, httpsPort));
         }
     }
 }
