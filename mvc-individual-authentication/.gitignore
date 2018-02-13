@@ -332,4 +332,6 @@ app.db
 # client deps out of repo
 yarn.lock
 package.json
+# development configuration
+appsettings.Development.json
 
