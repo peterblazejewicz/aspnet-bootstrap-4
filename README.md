@@ -13,6 +13,7 @@ This is work in progress. The current `most wanted` high priority topic is how t
 - [x] figure out the general assets update
 - [x] update Bootstrap assets to version 4
 - [x] update jQuery to version 3.*.*
+- [x] Popper.js included
 - [x] update jQuery-Validate plugin
 - [x] update jQuery unobstrusive-validation plugin
 - [x] update general template markup to match Boostrap 4 chagnes
