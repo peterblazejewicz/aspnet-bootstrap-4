@@ -6,7 +6,7 @@ Note that some content here is no longer applicable to a current aspnet/templati
 
 ## ASP.NET 5 Bootstrap  4
 
-This is work in progress. The current `most wanted` high priority topic is how to use `Font Awesome 5` here with `Bootstrap 4` - as the parts of the managers areas use older `glyphicons`.
+This is work in progress. The template comes with assets already in place and updated, but the markup of detail pages needs a review.
 
 ### TODO
 
@@ -18,7 +18,7 @@ This is work in progress. The current `most wanted` high priority topic is how t
 - [x] update jQuery unobstrusive-validation plugin
 - [x] update general template markup to match Boostrap 4 chagnes
 - [x] simplify general template
-- [ ] Font Awesome 5
+- [x] Font Awesome 5
 - [ ] subpages and subtamplates rewrite and update
 
 ## Author
