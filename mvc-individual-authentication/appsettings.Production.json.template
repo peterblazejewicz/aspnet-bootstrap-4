@@ -1,0 +1,26 @@
+﻿{
+  "HttpServer": {
+    "Endpoints": {
+      "Http": {
+        "Host": "localhost",
+        "Port": 5000,
+        "Scheme": "http"
+      },
+      "Https": {
+        "Host": "localhost",
+        "Port": 5001,
+        "Scheme": "https",
+        "FilePath": "PATH",
+        "Password": "PASS"
+      }
+    }
+  },
+  "Logging": {
+    "IncludeScopes": false,
+    "LogLevel": {
+      "Default": "Critical",
+      "System": "Information",
+      "Microsoft": "Information"
+    }
+  }
+}
