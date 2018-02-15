@@ -1,52 +1,24 @@
 # [:construction:] .NET templates (aspnet/templating) with Bootstrap 4
 
-In progress. The BS 4 landed, but not yet in your VS 2017.
+Very Much In Progress. The BS 4 has landed, but not yet in your VS 2017 and there is no current plan to change this AFAIK.
 
-Note that some content here is no longer applicable to a current aspnet/templating content (`Gulp`-ing no more?).
+Note that some content here is no longer applicable to a current aspnet/templating content (`Gulp`-ing, `Bower`-ing no more, what's up with updates folks?) before the sample is fully rewritten.
 
-# ASP.NET 5 Bootstrap 4 (alpha)
+## ASP.NET 5 Bootstrap  4
 
-The ASP.NET 5 web templates from @omnisharp/generator-aspnet updated for Bootstrap 4.
+This is work in progress. The current `most wanted` high priority topic is how to use `Font Awesome 5` here with `Bootstrap 4` - as the parts of the managers areas use older `glyphicons`.
 
-For ASP.NET 5 tooling team and for related projects.
+### TODO
 
-## Web Application Basic
-
-Take aways:
-* update `Bower.json` dependencies
-* use `Gulp` together with `projet.json` event scripts to execute `npm install` `bower install` and custom Gulp tasks for client side dependencies installation and optimization
-* update `_Layout.cshtml` `link` and `script` tag helpers sources. Note that at moment the Microsoft Ajax CND does not support Bootstrap 4 yet - while Bootstrap CDN service does
-* remove `Bootstrap Touch Carousel` together with `Hammer.js` dependencies - as `Bootstrap Touch Carousel` is no longer actively developed and maintained
-* update `navbar` component structure as per BS4
-* update `carousel` component structure as per BS4
-* consistent use of `btn-primary` for primary action on forms
-
-![Web Application Basic](assets/20150822103303.jpg)
-
-## Web Application
-
-This is still WIP
-
-Take aways:
-* update `Bower.json` dependencies
-* use `Gulp` together with `projet.json` event scripts to execute `npm install` `bower install` and custom Gulp tasks for client side dependencies installation and optimization
-* update `_Layout.cshtml` `link` and `script` tag helpers sources. Note that at moment the Microsoft Ajax CND does not support Bootstrap 4 yet - while Bootstrap CDN service does
-* remove `Bootstrap Touch Carousel` together with `Hammer.js` dependencies - as `Bootstrap Touch Carousel` is no longer actively developed and maintained
-* update `navbar` component structure as per BS4
-* update `carousel` component structure as per BS4
-* update `form` tag helper: no `form-horizontal` required
-* update `form-group`: add `row` class as there is no mixin for `form-group` now
-* create correct `label` + `input` BS4 component using below code:
-```cshtml
-<label asp-for="RememberMe">
-  <input asp-for="RememberMe" />
-  @Html.DisplayNameFor(m => m.RememberMe)
-</label>
-```
-The code will change after MVC TagHelpers are upgraded to support more features. For now the code needs to use standard Razor C# code (which is ugly)
-* The `jquery-validation` has been updated to version `1.14.0`. It has different distribution files structure similar to `jQuery`
-
-![Web Application](assets/20150824235725.jpg)
+- [x] figure out the general assets update
+- [x] update Bootstrap assets to version 4
+- [x] update jQuery to version 3.*.*
+- [x] update jQuery-Validate plugin
+- [x] update jQuery unobstrusive-validation plugin
+- [x] update general template markup to match Boostrap 4 chagnes
+- [x] simplify general template
+- [ ] Font Awesome 5
+- [ ] subpages and subtamplates rewrite and update
 
 ## Author
 
