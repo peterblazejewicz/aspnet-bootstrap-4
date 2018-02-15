@@ -8,6 +8,8 @@ Note that some content here is no longer applicable to a current aspnet/templati
 
 This is work in progress. The template comes with assets already in place and updated, but the markup of detail pages needs a review.
 
+![Screenshot](assets/screenshot.jpg)
+
 ### TODO
 
 - [x] figure out the general assets update
