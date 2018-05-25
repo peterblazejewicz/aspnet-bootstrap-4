@@ -330,9 +330,11 @@ ASALocalRun/
 app.db
 
 # client deps out of repo
-yarn.lock
-package.json
 # development and production  configuration
 appsettings.Development.json
 appsettings.Production.json
+package-lock.json
+yarn.lock
+# bundled client libraries
+wwwroot/lib/
 
