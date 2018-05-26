@@ -42,6 +42,21 @@
     },
     "sourceMap": true
   },
+  // fontawesome
+  {
+    "outputFileName": "wwwroot/lib/fontawesome/css/fontawesome-all.css",
+    "inputFiles": [
+      "node_modules/@fortawesome/fontawesome-free-webfonts/css/fa-brands.css",
+      "node_modules/@fortawesome/fontawesome-free-webfonts/css/fa-regular.css",
+      "node_modules/@fortawesome/fontawesome-free-webfonts/css/fa-solid.css",
+      "node_modules/@fortawesome/fontawesome-free-webfonts/css/fontawesome.css"
+    ],
+    "minify": {
+      "enabled": true,
+      "adjustRelativePaths": false
+    },
+    "sourceMap": true,
+  },
   // jquery
   {
     "outputFileName": "wwwroot/lib/jquery/dist/jquery.js",
