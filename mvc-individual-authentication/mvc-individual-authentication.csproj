@@ -9,6 +9,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <FontAwesomeSourceFiles Include="$(ProjectDir)node_modules\@fortawesome\fontawesome-free-webfonts\webfonts\**\*" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="BuildBundlerMinifier" Version="2.8.391" />
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.5" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="2.0.1" PrivateAssets="All" />
@@ -19,5 +23,12 @@
     <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.2" />
     <DotNetCliToolReference Include="BundlerMinifier.Core" Version="2.8.391" />
   </ItemGroup>
+
+  <Target Name="CopyFiles" BeforeTargets="BeforeBuild">
+        <Copy
+            SourceFiles="@(FontAwesomeSourceFiles)"
+            DestinationFiles="$(ProjectDir)wwwroot\lib\fontawesome\webfonts\%(RecursiveDir)%(Filename)%(Extension)"
+        />
+    </Target>
 
 </Project>
