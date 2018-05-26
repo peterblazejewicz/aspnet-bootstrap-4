@@ -18,9 +18,12 @@ This is work in progress. The template comes with assets already in place and up
 - [x] Popper.js included
 - [x] update jQuery-Validate plugin
 - [x] update jQuery unobstrusive-validation plugin
-- [x] update general template markup to match Boostrap 4 chagnes
+- [x] update general template markup to match Boostrap 4 changes
 - [x] simplify general template
 - [x] Font Awesome 5
+- [x] bundling with Bundler/Minifier
+- [x] FontAwesome web fonts support with assets `copy-on-build` support
+- [x] bundler `.js` and `.css` ship with minified version and source maps
 - [ ] subpages and subtamplates rewrite and update
 
 ## Author
