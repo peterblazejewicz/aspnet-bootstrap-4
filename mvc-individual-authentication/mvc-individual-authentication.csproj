@@ -24,11 +24,37 @@
     <DotNetCliToolReference Include="BundlerMinifier.Core" Version="2.8.391" />
   </ItemGroup>
 
+  <PropertyGroup>
+    <OriginalBuildDependsOn>$(BuildDependsOn)</OriginalBuildDependsOn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <BuildDependsOn>$(OriginalBuildDependsOn);WebCompile;BundleMinify</BuildDependsOn>
+  </PropertyGroup>
+  <Target Name="DebugEnsureNPM" BeforeTargets="Build" Condition="!Exists('$(ProjectDir)node_modules')">
+    <Exec Command="node --version" ContinueOnError="true">
+      <Output TaskParameter="ExitCode" PropertyName="ErrorCode" />
+    </Exec>
+    <Error Condition="'$(ErrorCode)' != '0'" Text="Node.js is required to build and run this project. To continue, please install Node.js from https://nodejs.org/, and then restart your command prompt or IDE." />
+    <Message Importance="high" Text="Restoring dependencies using 'npm'. This may take several minutes..." />
+    <Exec WorkingDirectory="$(ProjectDir)" Command="npm install" />
+  </Target>
+
   <Target Name="CopyFiles" BeforeTargets="BeforeBuild">
-        <Copy
-            SourceFiles="@(FontAwesomeSourceFiles)"
-            DestinationFiles="$(ProjectDir)wwwroot\lib\fontawesome\webfonts\%(RecursiveDir)%(Filename)%(Extension)"
-        />
-    </Target>
+    <Copy
+        SourceFiles="@(FontAwesomeSourceFiles)"
+        DestinationFiles="$(ProjectDir)wwwroot\lib\fontawesome\webfonts\%(RecursiveDir)%(Filename)%(Extension)"
+    />
+  </Target>
+
+  <Target Name="BundleMinify" DependsOnTargets="DebugEnsureNPM" AfterTarget="Build" Condition="'$(BuildingProject)' != 'false'">
+    <BundlerMinifier.BundlerBuildTask FileName="$(ProjectDir)bundleconfig.json" />
+  </Target>
+
+  <PropertyGroup>
+    <!-- Bundler clean requires the TypeScript destination directories to exist -->
+    <CleanDependsOn>GenerateBuildBundlerMinifierDirectories;$(CleanDependsOn)</CleanDependsOn>
+  </PropertyGroup>
+
+  
 
 </Project>
