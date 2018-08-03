@@ -1,5 +1,7 @@
 # [:construction:] .NET templates (aspnet/templating) with Bootstrap 4
 
+> Hey, there is ongoing work on the ASP.NET repo to upgrade the ASP.NET templates to BS4: https://github.com/aspnet/Templating/pull/595
+
 Very Much In Progress. The BS 4 has landed, but not yet in your VS 2017 and there is no current plan to change this AFAIK.
 
 Note that some content here is no longer applicable to a current aspnet/templating content (`Gulp`-ing, `Bower`-ing no more, what's up with updates folks?) before the sample is fully rewritten.
