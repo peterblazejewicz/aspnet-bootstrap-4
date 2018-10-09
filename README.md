@@ -1,4 +1,6 @@
-# [:construction:] .NET templates (aspnet/templating) with Bootstrap 4
+> HEADS-UP: MS did it! You need 2.1/2.2 dotnet SDK based templates You no longer needs this one
+
+# .NET templates (aspnet/templating) with Bootstrap 4
 
 > Hey, there is ongoing work on the ASP.NET repo to upgrade the ASP.NET templates to BS4: https://github.com/aspnet/Templating/pull/595
 
